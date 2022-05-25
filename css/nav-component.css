@@ -1,0 +1,64 @@
+.nav-component{
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.nav-component li:hover,nav .hamburger{
+    cursor:pointer;
+}
+
+.nav-component {
+    display:flex;
+    justify-content:space-between;
+}
+
+.nav-component .logoArea{
+    padding:10px;
+}
+
+.nav-component .hamburger{
+    display:none;
+}
+
+.nav-component ul{
+    list-style-type: none;
+    display:flex;
+    justify-content: end;
+    
+}
+
+.nav-component li {
+    padding:10px;
+}
+
+
+@media (max-width:768px){
+    
+    .nav-component {
+        display:flex;
+        flex-direction: column;
+        
+    }
+
+    .nav-component ul{
+        flex-direction:column;
+        align-items: center;
+        
+    }
+
+    .nav-component .logoArea{
+        display:flex;
+        justify-content: space-between;
+    }
+    .nav-component .hamburger{
+        display:block;
+    }
+
+    .nav-component ul.hide{
+        display:none;
+        
+    }
+
+    
+
+}

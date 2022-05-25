@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    
+    <link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/nav-component.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav >
+        
+            <div class="logoArea">
+                <a href="#home"><div class="logo">PHPDOKTOR</div></a>
+                <i class="fas fa-bars hamburger"></i>
+            </div>
+            
+            <ul class="hide">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">O mnie</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        
+    </nav>
+    <section id="home" class="container grid">
+        <div class="main-img">
+            <img src="/assets/mac_blackscreen.png" >
+            <span class="first-line"></span>
+            <span class="second-line"></span>
+            <span class="third-line"></span>
+        </div>
+
+        <h2>
+            Zajmuję się tworzeniem stron internetowych. Posiadam wieloletnie doświadczenie w tworzeniu stron systemowych usprawniających produkcję jak i mniejszych, krótkich projektów stron-wizytówek. W wolnym czasie zdarza mi się robić zdjęcia.
+        </h2>
+
+
+    </section>
+
+    <section id="about" class="container">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fugit laudantium ratione nam eos. Accusantium sint commodi obcaecati, dolor fuga neque eos rerum adipisci animi quasi! Nesciunt accusantium natus quae possimus enim amet animi reiciendis blanditiis neque sit cupiditate delectus non praesentium obcaecati, officiis, ad eveniet inventore quibusdam dolores ex!</p>
+    </section>
+
+    <section id="contact">
+
+    </section>
+
+
+    <canvas>
+
+    </canvas>
+
+
+    
+
+
+
+    <script src="./js/fx.js"></script>
+    <script src="/js/NavComponent.js"></script>
+    <script >
+        const nav = new NavComponent('nav')
+        nav.init()
+
+        const canvas = document.querySelector('canvas')
+        initMatrix(canvas)
+
+        const typedElement1 = document.querySelector('.first-line')
+        const typedElement2 = document.querySelector('.second-line')
+        const typedElement3 = document.querySelector('.third-line')
+
+        const texts = ['Programowanie WWW', 'Frontend oraz Backend', 'Specjalizacja: React.js i Laravel.php' ]
+
+        document.addEventListener('matrixAnimationComplete', () => {
+            initTypingAnimation(typedElement1, texts[0], 100)
+            setTimeout(() => initTypingAnimation(typedElement2,texts[1] , 100),texts[0].length*100)
+            setTimeout(() => initTypingAnimation(typedElement3, texts[2], 100),(texts[0].length + texts[1].length)*100)
+        }, true);
+
+        
+        
+
+    </script>
+</body>
+</html>
