@@ -33,7 +33,7 @@
     </nav>
     <section id="home" class="container grid">
         <div class="main-img">
-            <img src="/assets/mac_blackscreen.png" >
+            <img src="/assets/mac_black_screen3.png" >
             <span class="first-line"></span>
             <span class="second-line"></span>
             <span class="third-line"></span>
@@ -46,11 +46,50 @@
 
     </section>
 
-    <section id="about" class="container">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fugit laudantium ratione nam eos. Accusantium sint commodi obcaecati, dolor fuga neque eos rerum adipisci animi quasi! Nesciunt accusantium natus quae possimus enim amet animi reiciendis blanditiis neque sit cupiditate delectus non praesentium obcaecati, officiis, ad eveniet inventore quibusdam dolores ex!</p>
+    <section id="about" class="container grid">
+        
+            <h3>O mnie</h3>
+
+            <p> Lubię tworzyć minimalistyczne, przejrzyste i szybkie strony WWW. W projektowaniu wybieram proste narzędzia, które dają mi pełną kontrolę nad projektem.</p><br>   
+            <p> Zawodowo przez wiele lat zajmowałem się budową i rozwojem systemów do wspomagania producji (monitoring zamówień i zasobów przez przeglądarkę). Pomagał mi w tym język PHP i frameworki Codeigniter oraz (aktualnie) Laravel. Jeżeli chodzi o frontend, to używałem jQuery oraz od niedawna React.</p> 
+            
+            <h3>Doświadczenie zawodowe</h3>
+
+            <p> 10 lat pracy z frameworkiem Codeigniter PHP - budowa i rozbudowa strony internetowej umożliwiającej klientom rezerwację sesji zdjęciowych. Strona zawierala także bazę danych klientów i umożliwiała zarządzanie ich zdjęciami.</p><br>   
+            <p> Wieloletnie doświadczenie z jQuery i Bootstrap CSS do budowy frontendu.</p>
+            <p> 5 lat pracy z Laravel PHP - usługi pisane jako rozszerzenie głównego systemu i skomunikowane z nim przez API. </p> 
+
+            <h3>Wykształcenie</h3>
+            <p>Fizyka, Uniwersytet Szczeciński, 2011</p>
+            <p>Elektronika i Telekomunikacja, Zachodniopomorski Uniwersytet Technologiczny, 2009</p>
+        
     </section>
 
-    <section id="contact">
+    <section id="contact" class="container grid">
+        <h3>Zapraszam do kontaktu</h3>
+        
+        <form >
+            <label>
+                <span>Imię</span>
+                <input type="text" name="first_name" required>
+            </label>
+            <label>
+                <span>Nazwisko</span>
+                <input type="text" name="last_name"  required>
+            </label>
+            <label>
+                <span>Email</span>
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                <span>Wiadomość</span>
+                <textarea name="message">
+
+                </textarea>
+            </label>
+            
+
+        </form>
 
     </section>
 
@@ -77,7 +116,7 @@
         const typedElement2 = document.querySelector('.second-line')
         const typedElement3 = document.querySelector('.third-line')
 
-        const texts = ['Programowanie WWW', 'Frontend oraz Backend', 'Specjalizacja: React.js i Laravel.php' ]
+        const texts = ['Programowanie WWW', 'Frontend oraz Backend', 'Specjalizacja: react.js i laravel.php' ]
 
         document.addEventListener('matrixAnimationComplete', () => {
             initTypingAnimation(typedElement1, texts[0], 100)
