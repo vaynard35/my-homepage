@@ -2,6 +2,7 @@
 :root{
     --primary:#0f0;
     --secondary:black;
+    --section-background:black;
 
 }
 
@@ -154,7 +155,7 @@ nav a:hover{
 
 #home h2 {
     grid-column: 2 / 8;
-    background-color:black;
+    background-color:var(--section-background);
     
 }
 
@@ -204,7 +205,7 @@ section, nav{
 }
 
 #about {
-    background-color: black;
+    background-color: var(--section-background);
     padding:20px;
     
 }
@@ -256,7 +257,7 @@ section h3 {
 
 
 #contact{
-    background-color: black;
+    background-color: var(--section-background);
     padding:20px;
     margin-top:100px;
 }
