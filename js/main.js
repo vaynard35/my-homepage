@@ -29,7 +29,7 @@ setTimeout( () => {
 //handle form submission
 
 const form = document.querySelector('form')
-const formUrl = 'https://phpdoktor.pl/contactSubmit'
+const formUrl = 'http://127.0.0.1:5500/index.html'
 
 
 form.addEventListener('submit', e => {
@@ -41,6 +41,7 @@ form.addEventListener('submit', e => {
     fetch(formUrl, {body: data, method: 'POST' } )
         .then(respnse => {
 
+            form.reset()
             document.querySelector('.response_ok').classList.remove('hide')
             document.querySelector('.response_error').classList.add('hide')
 

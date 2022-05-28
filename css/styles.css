@@ -348,6 +348,23 @@ section h3 {
 }
 
 
+#contact .response_ok {
+    padding:20px;
+    text-align: center;
+    background-color:#e6fffa;
+    border:1px solid green;
+    border-radius:10px;
+    font-size: 1.2em;
+}
+
+#contact .response_error {
+    padding:20px;
+    text-align: center;
+    background-color:#fff5f5;
+    border:1px solid red;
+    border-radius:10px;
+    font-size: 1.2em;
+}
 
 
 
