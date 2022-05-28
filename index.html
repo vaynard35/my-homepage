@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHPDOKTOR</title>
+    <title>Phpdoktor</title>
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -37,16 +37,28 @@
             <span class="first-line"></span>
             <span class="second-line"></span>
             <span class="third-line"></span>
+            <span class="fourth-line"></span>
         </div>
 
-        <h2>
-            Zajmuję się tworzeniem stron internetowych. Posiadam wieloletnie doświadczenie w tworzeniu stron systemowych usprawniających produkcję jak i mniejszych, krótkich projektów stron-wizytówek. W wolnym czasie zdarza mi się robić zdjęcia.
+        <h2 class="block-shadow-lg">
+            <p>Zajmuję się tworzeniem stron internetowych.</p><p>Posiadam wieloletnie doświadczenie w tworzeniu stron systemowych usprawniających produkcję jak i mniejszych, krótkich projektów stron-wizytówek. </p><p>W wolnym czasie zdarza mi się robić zdjęcia.</p>
         </h2>
 
+        <!-- go down arrow-->
+        <a href="#about"> 
+            <div class="arrow">
+              <ul>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </a>
 
     </section>
 
-    <section id="about" class="container grid">
+   
+
+    <section id="about" class="container grid block-shadow">
         
             <h3>O mnie</h3>
 
@@ -75,14 +87,21 @@
             <p> 5 lat pracy z Laravel PHP - usługi pisane jako rozszerzenie głównego systemu i skomunikowane z nim przez API. </p> 
 
             <h3>Wykształcenie</h3>
-            <p>Fizyka, Uniwersytet Szczeciński, 2011</p>
-            <p>Elektronika i Telekomunikacja, Zachodniopomorski Uniwersytet Technologiczny, 2009</p>
+            <p>Fizyka, Uniwersytet Szczeciński, rok ukończenia: 2011.</p>
+            <p>Elektronika i Telekomunikacja, Zachodniopomorski Uniwersytet Technologiczny, rok ukończenia: 2009.</p>
         
     </section>
 
-    <section id="contact" class="container grid">
+    <section id="contact" class="container grid block-shadow">
         <h3>Zapraszam do kontaktu</h3>
-        
+
+        <div class="response_ok">
+            <p>Dziękuję za wiadomość. Postaram się jak najszybciej odpowiedzieć.</p>
+         </div>
+        <div class="response_error">
+            <p>Coś poszło nie tak. Proszę spróbuj później.  
+            <p class="error_message"></p>
+        </div>
         <form >
             <label>
                 <span>Imię</span>
@@ -98,10 +117,9 @@
             </label>
             <label>
                 <span>Wiadomość</span>
-                <textarea name="message" rows="6">
-
-                </textarea>
+                <textarea name="message" rows="6" required></textarea>
             </label>
+            <button>Wyślij</button>
             
 
         </form>
@@ -120,28 +138,6 @@
 
     <script src="./js/fx.js"></script>
     <script src="/js/NavComponent.js"></script>
-    <script >
-        const nav = new NavComponent('nav')
-        nav.init()
-
-        const canvas = document.querySelector('canvas')
-        initMatrix(canvas)
-
-        const typedElement1 = document.querySelector('.first-line')
-        const typedElement2 = document.querySelector('.second-line')
-        const typedElement3 = document.querySelector('.third-line')
-
-        const texts = ['Programowanie WWW', 'Frontend oraz Backend', 'Specjalizacja: react.js i laravel.php' ]
-
-        document.addEventListener('matrixAnimationComplete', () => {
-            initTypingAnimation(typedElement1, texts[0], 100)
-            setTimeout(() => initTypingAnimation(typedElement2,texts[1] , 100),texts[0].length*100)
-            setTimeout(() => initTypingAnimation(typedElement3, texts[2], 100),(texts[0].length + texts[1].length)*100)
-        }, true);
-
-        
-        
-
-    </script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

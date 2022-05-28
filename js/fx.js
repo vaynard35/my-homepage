@@ -18,7 +18,7 @@ initMatrix = (canvas) => {
     canvas.height = window.innerHeight;
 
     // Setting up the letters
-    var letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ';
+    var letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ123456789';
     letters = letters.split('');
 
     // Setting up the columns
@@ -33,11 +33,11 @@ initMatrix = (canvas) => {
 
     // Setting up the draw function
     function drawMatrix() {
-    ctx.fillStyle = 'rgba(0, 0, 0, .1)';
+    ctx.fillStyle = 'rgba(255, 255, 255, .1)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     for (var i = 0; i < drops.length; i++) {
     var text = letters[Math.floor(Math.random() * letters.length)];
-    ctx.fillStyle = '#0f0';
+    ctx.fillStyle = '#000';
     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
     drops[i]++;
     if (drops[i] * fontSize > canvas.height && Math.random() > .95) {
